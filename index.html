@@ -30,7 +30,8 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         /* Botones principales */
-        .menu-item > button {
+        .menu-item > button,
+        .direct-link {
             background: #3a8fb7;
             color: #fff;
             border: none;
@@ -43,8 +44,12 @@
             width: 100%;
             margin-bottom: 10px;
             transition: background 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        .menu-item > button:hover {
+        .menu-item > button:hover,
+        .direct-link:hover {
             background: #2b6e92;
         }
         /* Subcategorías encerradas */
@@ -73,35 +78,27 @@
         .submenu-item a:hover {
             text-decoration: underline;
         }
-        /* Enlaces directos */
-        .direct-link {
-            background: #e0f4ff;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 15px;
-            text-align: center;
-            font-size: 1.4em;
-            font-family: 'Quicksand', sans-serif;
-            color: #3a8fb7;
-            text-decoration: none;
-            display: block;
-            transition: background 0.3s ease;
-        }
-        .direct-link:hover {
-            background: #bde6ff;
-        }
     </style>
     <script>
         function toggleSubmenu(event) {
-            // Ocultar todos los submenús primero
-            document.querySelectorAll(".submenu").forEach(submenu => {
-                submenu.style.display = "none";
+            const currentSubmenu = event.currentTarget.nextElementSibling;
+            const allSubmenus = document.querySelectorAll('.submenu');
+            const allButtons = document.querySelectorAll('.menu-item > button');
+
+            allSubmenus.forEach(submenu => {
+                if (submenu !== currentSubmenu) submenu.style.display = 'none';
             });
 
-            // Mostrar el submenú actual si estaba oculto
-            const submenu = event.currentTarget.nextElementSibling;
-            if (submenu) {
-                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            allButtons.forEach(button => {
+                if (button !== event.currentTarget) button.classList.remove('active');
+            });
+
+            if (currentSubmenu.style.display === 'block') {
+                currentSubmenu.style.display = 'none';
+                event.currentTarget.classList.remove('active');
+            } else {
+                currentSubmenu.style.display = 'block';
+                event.currentTarget.classList.add('active');
             }
         }
     </script>
@@ -123,27 +120,28 @@
             <button onclick="toggleSubmenu(event)">🍼 Baby Shower</button>
             <div class="submenu">
                 <div class="submenu-item"><a href="https://1drv.ms/v/s!Amafr9pUVHtKg6dcY4qRut_v4a6QOA?e=GnLIDI" target="_blank">Invitación</a></div>
-                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg7BKt9k7xnxfr0WpPg?e=ZNUEaE" target="_blank">Recuerdo</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg7BKt9k7xnxfr0WpPg?e=ZNUEaE" target="_blank">Recuerdos</a></div>
                 <div class="submenu-item"><a href="https://1drv.ms/v/s!Amafr9pUVHtKg6BPXF3RDIAridfhuw?e=dnH9T2" target="_blank">Video</a></div>
                 <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg6AHLVWjTQTfWmYBbQ?e=Af23hI" target="_blank">Fotos</a></div>
             </div>
         </div>
-        <!-- En la barriga (enlace directo) -->
-        <a href="ENLACE_8" target="_blank" class="https://1drv.ms/f/s!Amafr9pUVHtKg6thHzksqI84kF7iNg?e=00MnC5">🤰 En la barriga</a>
-        <!-- Newborn (enlace directo) -->
-        <a href="ENLACE_9" target="_blank" class="https://1drv.ms/f/s!Amafr9pUVHtKg6hxKknhalRwVvJqhA?e=nsvADe">👶 Newborn</a>
+        <!-- En la barriga -->
+        <a href="https://1drv.ms/f/s!Amafr9pUVHtKg6thHzksqI84kF7iNg?e=00MnC5" target="_blank" class="direct-link">🤰 En la barriga</a>
+        <!-- Newborn -->
+        <a href="https://1drv.ms/f/s!Amafr9pUVHtKg6hxKknhalRwVvJqhA?e=nsvADe" target="_blank" class="direct-link">👶 Newborn</a>
         <!-- Mesario -->
         <div class="menu-item">
             <button onclick="toggleSubmenu(event)">📅 Mesario</button>
             <div class="submenu">
                 <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BMOlxJYuKIOqKFqA?e=cfYZFJ" target="_blank">Mes 1</a></div>
                 <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BNq1Z3zfz85VdCmw?e=8AAmoA" target="_blank">Mes 2</a></div>
-                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BO34ZtMaPKScrqwQ?e=MA8OKp" target="_blank">Mes 3</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BO34ZtMaPKScrqwQ?e=vgMQnM" target="_blank">Mes 3</a></div>
             </div>
         </div>
-        <!-- Fotos Fotos (enlace directo) -->
-        <a href="ENLACE_13" target="_blank" class="https://1drv.ms/a/s!Amafr9pUVHtKg7BO34ZtMaPKScrqwQ?e=vgMQnM">📸 Fotos Fotos</a>
+        <!-- Fotos Fotos -->
+        <a href="https://1drv.ms/a/s!Amafr9pUVHtKg542Q9bta4PL9i8PiA?e=wqqLnQ" target="_blank" class="direct-link">📸 Fotos Fotos</a>
     </div>
 </body>
 </html>
+
 
