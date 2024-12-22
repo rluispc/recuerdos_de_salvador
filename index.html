@@ -9,48 +9,50 @@
         /* Estilos generales */
         body {
             font-family: 'Nunito', sans-serif;
-            background: linear-gradient(to bottom, #eaf6ff, #d1ecf5);
+            background: linear-gradient(to bottom, #d4f0ff, #a8dff5);
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            color: #2a4d69;
+            color: #1e4a63;
         }
         h1 {
             text-align: center;
             font-family: 'Baloo 2', cursive;
             font-size: 3em;
-            color: #3a8fb7;
+            color: #1e81b0;
             margin: 30px 0;
         }
         .menu {
             max-width: 700px;
             margin: 0 auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         /* Botones principales */
         .menu-item > button,
         .direct-link {
-            background: #3a8fb7;
+            background: #1e81b0;
             color: #fff;
             border: none;
             padding: 15px;
-            font-size: 1.4em;
+            font-size: 1.2em;
             font-family: 'Nunito', sans-serif;
             border-radius: 15px;
             cursor: pointer;
             text-align: left;
             width: 100%;
             margin-bottom: 10px;
-            transition: background 0.3s ease;
+            transition: all 0.3s ease;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            text-decoration: none;
         }
         .menu-item > button:hover,
         .direct-link:hover {
-            background: #2b6e92;
+            background: #145d84;
         }
         /* Subcategorías encerradas */
         .submenu {
@@ -59,20 +61,21 @@
             padding-left: 20px;
         }
         .submenu-item {
-            background: #e0f4ff;
+            background: #e3f7ff;
             padding: 10px 15px;
             margin: 5px 0;
             border-radius: 10px;
-            font-size: 1.1em;
+            font-size: 1em;
             font-family: 'Quicksand', sans-serif;
             font-weight: 600;
+            transition: background 0.3s ease;
         }
         .submenu-item:hover {
-            background: #bde6ff;
+            background: #b9eaff;
         }
         .submenu-item a {
             text-decoration: none;
-            color: #3a8fb7;
+            color: #1e81b0;
             font-weight: bold;
         }
         .submenu-item a:hover {
@@ -143,5 +146,3 @@
     </div>
 </body>
 </html>
-
-
