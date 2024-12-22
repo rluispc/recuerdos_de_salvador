@@ -31,8 +31,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         /* Botones principales */
-        .menu-item > button,
-        .direct-link {
+        .menu-item > button {
             background: #1e81b0;
             color: #fff;
             border: none;
@@ -48,17 +47,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            text-decoration: none;
         }
-        .menu-item > button:hover,
-        .direct-link:hover {
+        .menu-item > button:hover {
             background: #145d84;
-        }
-        .direct-link {
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
         /* Subcategorías encerradas */
         .submenu {
@@ -135,9 +126,19 @@
             </div>
         </div>
         <!-- En la barriga -->
-        <a href="https://1drv.ms/f/s!Amafr9pUVHtKg6thHzksqI84kF7iNg?e=00MnC5" target="_blank" class="direct-link">🤰 En la barriga</a>
+        <div class="menu-item">
+            <button onclick="toggleSubmenu(event)">🤰 En la barriga</button>
+            <div class="submenu">
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg6thHzksqI84kF7iNg?e=00MnC5" target="_blank">Fotos</a></div>
+            </div>
+        </div>
         <!-- Newborn -->
-        <a href="https://1drv.ms/f/s!Amafr9pUVHtKg6hxKknhalRwVvJqhA?e=nsvADe" target="_blank" class="direct-link">👶 Newborn</a>
+        <div class="menu-item">
+            <button onclick="toggleSubmenu(event)">👶 Newborn</button>
+            <div class="submenu">
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg6hxKknhalRwVvJqhA?e=nsvADe" target="_blank">Fotos</a></div>
+            </div>
+        </div>
         <!-- Mesario -->
         <div class="menu-item">
             <button onclick="toggleSubmenu(event)">📅 Mesario</button>
@@ -148,7 +149,12 @@
             </div>
         </div>
         <!-- Fotos Fotos -->
-        <a href="https://1drv.ms/a/s!Amafr9pUVHtKg542Q9bta4PL9i8PiA?e=wqqLnQ" target="_blank" class="direct-link">📸 Fotos Fotos</a>
+        <div class="menu-item">
+            <button onclick="toggleSubmenu(event)">📸 Fotos Fotos</button>
+            <div class="submenu">
+                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg542Q9bta4PL9i8PiA?e=wqqLnQ" target="_blank">Fotos</a></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
