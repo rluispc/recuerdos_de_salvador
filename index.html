@@ -73,11 +73,36 @@
         .submenu-item a:hover {
             text-decoration: underline;
         }
+        /* Enlaces directos */
+        .direct-link {
+            background: #e0f4ff;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-size: 1.4em;
+            font-family: 'Quicksand', sans-serif;
+            color: #3a8fb7;
+            text-decoration: none;
+            display: block;
+            transition: background 0.3s ease;
+        }
+        .direct-link:hover {
+            background: #bde6ff;
+        }
     </style>
     <script>
         function toggleSubmenu(event) {
+            // Ocultar todos los submenús primero
+            document.querySelectorAll(".submenu").forEach(submenu => {
+                submenu.style.display = "none";
+            });
+
+            // Mostrar el submenú actual si estaba oculto
             const submenu = event.currentTarget.nextElementSibling;
-            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            if (submenu) {
+                submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+            }
         }
     </script>
 </head>
@@ -88,42 +113,37 @@
         <div class="menu-item">
             <button onclick="toggleSubmenu(event)">🎉 Revelación</button>
             <div class="submenu">
-                <div class="submenu-item"><a href="ENLACE_1" target="_blank">Invitación</a></div>
-                <div class="submenu-item"><a href="ENLACE_2" target="_blank">Videos</a></div>
-                <div class="submenu-item"><a href="ENLACE_3" target="_blank">Fotos</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/v/s!Amafr9pUVHtKg7AraiIDBYEQQs2JDg?e=sLhCbe" target="_blank">Invitación</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg7AszLLQLX_j_UAUSA?e=3EY9Rc" target="_blank">Videos</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg5BBy_8tqlOE7TB9GQ?e=QdTMEx" target="_blank">Fotos</a></div>
             </div>
         </div>
         <!-- Baby Shower -->
         <div class="menu-item">
             <button onclick="toggleSubmenu(event)">🍼 Baby Shower</button>
             <div class="submenu">
-                <div class="submenu-item"><a href="ENLACE_4" target="_blank">Invitación</a></div>
-                <div class="submenu-item"><a href="ENLACE_5" target="_blank">Recuerdo</a></div>
-                <div class="submenu-item"><a href="ENLACE_6" target="_blank">Video</a></div>
-                <div class="submenu-item"><a href="ENLACE_7" target="_blank">Fotos</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/v/s!Amafr9pUVHtKg6dcY4qRut_v4a6QOA?e=GnLIDI" target="_blank">Invitación</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg7BKt9k7xnxfr0WpPg?e=ZNUEaE" target="_blank">Recuerdo</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/v/s!Amafr9pUVHtKg6BPXF3RDIAridfhuw?e=dnH9T2" target="_blank">Video</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/f/s!Amafr9pUVHtKg6AHLVWjTQTfWmYBbQ?e=Af23hI" target="_blank">Fotos</a></div>
             </div>
         </div>
-        <!-- En la barriga -->
-        <div class="menu-item">
-            <button onclick="toggleSubmenu(event)">🤰 En la barriga</button>
-        </div>
-        <!-- Newborn -->
-        <div class="menu-item">
-            <button onclick="toggleSubmenu(event)">👶 Newborn</button>
-        </div>
+        <!-- En la barriga (enlace directo) -->
+        <a href="ENLACE_8" target="_blank" class="https://1drv.ms/f/s!Amafr9pUVHtKg6thHzksqI84kF7iNg?e=00MnC5">🤰 En la barriga</a>
+        <!-- Newborn (enlace directo) -->
+        <a href="ENLACE_9" target="_blank" class="https://1drv.ms/f/s!Amafr9pUVHtKg6hxKknhalRwVvJqhA?e=nsvADe">👶 Newborn</a>
         <!-- Mesario -->
         <div class="menu-item">
             <button onclick="toggleSubmenu(event)">📅 Mesario</button>
             <div class="submenu">
-                <div class="submenu-item"><a href="ENLACE_8" target="_blank">Mes 1</a></div>
-                <div class="submenu-item"><a href="ENLACE_9" target="_blank">Mes 2</a></div>
-                <div class="submenu-item"><a href="ENLACE_10" target="_blank">Mes 3</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BMOlxJYuKIOqKFqA?e=cfYZFJ" target="_blank">Mes 1</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BNq1Z3zfz85VdCmw?e=8AAmoA" target="_blank">Mes 2</a></div>
+                <div class="submenu-item"><a href="https://1drv.ms/a/s!Amafr9pUVHtKg7BO34ZtMaPKScrqwQ?e=MA8OKp" target="_blank">Mes 3</a></div>
             </div>
         </div>
-        <!-- Fotos Fotos -->
-        <div class="menu-item">
-            <button onclick="toggleSubmenu(event)">📸 Fotos Fotos</button>
-        </div>
+        <!-- Fotos Fotos (enlace directo) -->
+        <a href="ENLACE_13" target="_blank" class="https://1drv.ms/a/s!Amafr9pUVHtKg542Q9bta4PL9i8PiA?e=wqqLnQ">📸 Fotos Fotos</a>
     </div>
 </body>
 </html>
+
